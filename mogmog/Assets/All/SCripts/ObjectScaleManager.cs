@@ -8,6 +8,8 @@ public class ObjectScaleManager : MonoBehaviour {
 
 	[SerializeField] GameObject gameObject;
 
+	private AudioSource eatSound1;
+
 	public bool scaleFlag0 = false;
 
 	public bool scaleFlag1 = false;
@@ -22,7 +24,8 @@ public class ObjectScaleManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		//statemanager.state = 5;
+		
 	}
 
 	// Update is called once per frame
@@ -33,13 +36,13 @@ public class ObjectScaleManager : MonoBehaviour {
 		}else if(statemanager.state == 1){
 
 			scaleFlag1 = true;
-		}else if(statemanager.state == 2 && scaleFlag1 == true){
+		}else if(statemanager.state == 2){
 
 			scaleFlag2 = true;
-		}else if(statemanager.state == 3 && scaleFlag2 == true){
+		}else if(statemanager.state == 3){
 
 			scaleFlag3 = true;
-		}else if(statemanager.state == 4 && scaleFlag3 == true){
+		}else if(statemanager.state == 4){
 
 			scaleFlag4 = true;
 		}else if(statemanager.state == 5 && scaleFlag3 == true){

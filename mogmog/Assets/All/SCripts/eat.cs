@@ -10,6 +10,9 @@ public GameObject HMD ;
 public GameObject Food;
 Vector3 pos;
 
+private AudioSource eatSound1;
+private AudioSource breakSound;
+
 
 [SerializeField]
 public GameObject usagi;
@@ -17,6 +20,9 @@ public GameObject usagi;
 	// Use this for initialization
 	void Start () {
 
+		AudioSource[] audiosource = GetComponents<AudioSource>();
+		eatSound1 = audiosource[0];
+		breakSound = audiosource[1];
 	}
 
 	// Update is called once per frame
@@ -40,6 +46,9 @@ public GameObject usagi;
 
 //センサに食べ物が当たった時の処理
 	if(ContollerGrabObject.GrabFlag == true){
+
+		eatSound1.PlayOneShot(eatSound1.clip);
+
 		switch(col.gameObject.tag){
 
 			case "hare":
@@ -81,6 +90,7 @@ public GameObject usagi;
 		statemanager.Timeflag = 1;
 		SteamVR_Fade.Start(Color.black,0f);
 		Debug.Log("deaddddd");
+			breakSound.PlayOneShot(breakSound.clip);
 			Invoke("Dead",2);
 
 		break;
