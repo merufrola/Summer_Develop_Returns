@@ -8,14 +8,24 @@ public class FinishScripManager : MonoBehaviour {
 public Text text1;
 public Text text2;
 public Text text3;
+private AudioSource winsound;
+private AudioSource losesound;
 
 	// Use this for initialization
 	void Start () {
+		AudioSource[] audiosource = GetComponents<AudioSource>();
+	winsound = audiosource[0];
+	losesound = audiosource[1];
+
+
+
 		statemanager.SceneFlag = 1;
-		if(statemanager.state>5){
+		if(statemanager.state>=5){
 			text1.text = "Game Complete!";
+			winsound.PlayOneShot(winsound.clip);
 		}else{
 			text1.text = "Game Over!";
+			losesound.PlayOneShot(losesound.clip);
 		}
 
 		text2.text = "point：" + statemanager.point;

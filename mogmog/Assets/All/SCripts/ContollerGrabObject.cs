@@ -122,19 +122,19 @@ public class ContollerGrabObject : MonoBehaviour {
             if (collidingObject)
             {
                 if(objectName == "wolf" && statemanager.state <= 3){
-                    GrabFlag = true;
+                    statemanager.wolfgrab = true;
                     GrabObject();
                 }else if(objectName == "bear" && statemanager.state <= 4){
-                    GrabFlag = true;
+                     statemanager.beargrab= true;
                     GrabObject();
                 }else if(objectName == "hare" && statemanager.state <= 1){
-                    GrabFlag = true;
+                    statemanager.haregrab = true;
                     GrabObject();
                 }else if(objectName == "fox" && statemanager.state <= 2){
-                    GrabFlag = true;
+                    statemanager.foxgrab = true;
                     GrabObject();
                 }else if(objectName == "food" && statemanager.state >= 0){
-                    GrabFlag = true;
+                    statemanager.foodgrab = true;
                     GrabObject();
                 }
 
@@ -150,51 +150,5 @@ public class ContollerGrabObject : MonoBehaviour {
             }
         }
     }
-    //
-    // void Grab(){
-    //
-    //     if (Controller.GetHairTriggerDown())
-    //     {
-    //         if (collidingObject)
-    //         {
-    //             GrabObject();
-    //             // switch(collidingObject.transform.tag){
-    //             //     case "food":
-    //             //         GrabObject();
-    //             //         break;
-    //             // case "hare" :
-    //             //     if(statemanager.statemanager.statemanager.state>0){
-    //             //         GrabObject();
-    //             //     }
-    //             // break;
-    //             // case "fox" :
-    //             // if(statemanager.statemanager.statemanager.state>1){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "wolf" :
-    //             // if(statemanager.statemanager.statemanager.state>2){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "bear" :
-    //             // if(statemanager.statemanager.statemanager.state>3){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // if(statemanager.statemanager.statemanager.state>4){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "human" :
-    //             // if(statemanager.statemanager.statemanager.state>5){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //     //    }
-    //
-    //
-    //         }
-    //     }
-    // }
+
 }
