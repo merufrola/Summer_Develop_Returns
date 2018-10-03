@@ -75,6 +75,7 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 
 	}
 void damage(){
+	ContollerGrabObject.GrabFlag = false;
 	Destroy(this.gameObject);
 }
 
@@ -83,36 +84,36 @@ int rand(){
 	return randGOAL;
 }
 
-void OnTriggerEnter(Collider col){
-	if(col.gameObject.tag == "grab"){
-		switch(transform.tag){
-			case "hare":
-			if(statemanager.haregrab){
-				SendMessage("Grab");
-			}
-			break;
-
-			case "fox":
-			if(statemanager.foxgrab){
-				SendMessage("Grab");
-			}
-			break;
-
-			case "wolf":
-			if(statemanager.wolfgrab){
-				SendMessage("Grab");
-			}
-			break;
-
-			case "bear":
-			if(statemanager.beargrab){
-				SendMessage("Grab");
-			}
-			break;
-
-
-		}
-	}
-}
+// void OnTriggerEnter(Collider col){
+// 	if(col.gameObject.tag == "grab"){
+// 		switch(transform.tag){
+// 			case "hare":
+// 			if(statemanager.haregrab){
+// 				SendMessage("Grab");
+// 			}
+// 			break;
+//
+// 			case "fox":
+// 			if(statemanager.foxgrab){
+// 				SendMessage("Grab");
+// 			}
+// 			break;
+//
+// 			case "wolf":
+// 			if(statemanager.wolfgrab){
+// 				SendMessage("Grab");
+// 			}
+// 			break;
+//
+// 			case "bear":
+// 			if(statemanager.beargrab){
+// 				SendMessage("Grab");
+// 			}
+// 			break;
+//
+//
+// 		}
+// 	}
+// }
 
 }

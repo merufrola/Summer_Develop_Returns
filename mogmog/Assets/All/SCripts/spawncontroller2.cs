@@ -22,15 +22,13 @@ public class spawncontroller2 : MonoBehaviour {
 	}
 
 	void spawner(){
-if(statemanager.Timeflag == 0){ 
+
 		for(int i = 3; i>0; --i){
 			randSPN = Random.Range(0,3);
 			randTime = Random.Range(0,3);
 		Instantiate (target, new Vector3(Spawner[randSPN],0,-0.8f + Spawner[randTime]),Quaternion.identity);
 		Debug.Log("drop");
 		}
-	}
-
 
 	}
 }

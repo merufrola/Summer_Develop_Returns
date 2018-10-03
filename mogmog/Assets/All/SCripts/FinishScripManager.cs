@@ -19,19 +19,20 @@ public Text text3;
 		}
 
 		text2.text = "point：" + statemanager.point;
-		text3.text = "Retry?";
+		//text3.text = "Pull trigger to Retry";
 
 	}
 
 	// Update is called once per frame
 	void Update () {
-		var trackedObject = GetComponent<SteamVR_TrackedObject>();
-	         var device = SteamVR_Controller.Input((int)trackedObject.index);
-			 if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
-		           {
-		               Debug.Log("トリガーを深く引いた");
-					   SceneManager.LoadScene("risu");
-		           }
+
+		// var trackedObject = GetComponent<SteamVR_TrackedObject>();
+	    //      var device = SteamVR_Controller.Input((int)trackedObject.index);
+		// 	 if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+		//            {
+		//                Debug.Log("トリガーを深く引いた");
+		// 			   SceneManager.LoadScene("risu");
+		//            }
 
 	}
 

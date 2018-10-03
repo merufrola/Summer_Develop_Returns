@@ -112,19 +112,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef180a95f4214c4991c84b700ed0051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 8
+  destroyTime: 15
 --- !u!114 &114759174017913058
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649893787229322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 575cbab40c63e9f4c8455ffe0707d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1649893787229322}
+  scaleFlag0: 0
+  scaleFlag1: 0
+  scaleFlag2: 0
+  scaleFlag3: 0
+  scaleFlag4: 0
+  scaleFlag5: 0
 --- !u!135 &135005388757389534
 SphereCollider:
   m_ObjectHideFlags: 1

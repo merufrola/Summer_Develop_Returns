@@ -23,6 +23,8 @@ public class risuScaleController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// サイズは変わる
+		// statemanager.state = 5;
 		if(statemanager.state == 0){
 			this.transform.localScale = new Vector3(0.3f,0.3f,0.3f);
 		}else if(statemanager.state == 1){
@@ -36,6 +38,7 @@ public class risuScaleController : MonoBehaviour {
 		}else if(statemanager.state == 5){
 			this.transform.localScale = new Vector3(1.8f,1.8f,1.8f);
 		}
+		Debug.Log("現在のステートは" + statemanager.state);
 	}
 
 	// Update is called once per frame

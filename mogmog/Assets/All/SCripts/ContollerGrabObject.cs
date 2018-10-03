@@ -133,7 +133,7 @@ public class ContollerGrabObject : MonoBehaviour {
                 }else if(objectName == "fox" && statemanager.state <= 2){
                     GrabFlag = true;
                     GrabObject();
-                }else if(objectName == "food" && statemanager.state == 0){
+                }else if(objectName == "food" && statemanager.state >= 0){
                     GrabFlag = true;
                     GrabObject();
                 }
