@@ -27,7 +27,7 @@ public class ViveControllerInputTest : MonoBehaviour {
         {
             if (statemanager.SceneFlag == 1){
             Debug.Log(gameObject.name + " Trigger Press");
-            SceneManager.LoadScene("risu");
+            
 
         }
         }

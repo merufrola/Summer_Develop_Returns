@@ -14,8 +14,6 @@ public class ContollerGrabObject : MonoBehaviour {
 
     public static string objectName;
 
-    public static int state;
-
 
 
     //public bool canGrab = false;
@@ -81,6 +79,12 @@ public class ContollerGrabObject : MonoBehaviour {
             return;
         }
 
+        statemanager.haregrab = false;
+        statemanager.foxgrab = false;
+        statemanager.wolfgrab = false;
+        statemanager.beargrab = false;
+        statemanager.foodgrab = false;
+
         collidingObject = null;
         objectName = null;
     }
@@ -121,20 +125,21 @@ public class ContollerGrabObject : MonoBehaviour {
         {
             if (collidingObject)
             {
-                if(objectName == "wolf" && statemanager.state <= 3){
-                    GrabFlag = true;
+                if(objectName == "wolf" && statemanager.state >= 3){
+                    statemanager.wolfgrab = true;
                     GrabObject();
-                }else if(objectName == "bear" && statemanager.state <= 4){
-                    GrabFlag = true;
+                }else if(objectName == "bear" && statemanager.state >= 4){
+                     statemanager.beargrab= true;
                     GrabObject();
-                }else if(objectName == "hare" && statemanager.state <= 1){
-                    GrabFlag = true;
+                }else if(objectName == "hare" && statemanager.state >= 1){
+                    statemanager.haregrab = true;
+                    Debug.Log(statemanager.haregrab);
                     GrabObject();
-                }else if(objectName == "fox" && statemanager.state <= 2){
-                    GrabFlag = true;
+                }else if(objectName == "fox" && statemanager.state >= 2){
+                    statemanager.foxgrab = true;
                     GrabObject();
                 }else if(objectName == "food" && statemanager.state >= 0){
-                    GrabFlag = true;
+                    statemanager.foodgrab = true;
                     GrabObject();
                 }
 
@@ -150,51 +155,5 @@ public class ContollerGrabObject : MonoBehaviour {
             }
         }
     }
-    //
-    // void Grab(){
-    //
-    //     if (Controller.GetHairTriggerDown())
-    //     {
-    //         if (collidingObject)
-    //         {
-    //             GrabObject();
-    //             // switch(collidingObject.transform.tag){
-    //             //     case "food":
-    //             //         GrabObject();
-    //             //         break;
-    //             // case "hare" :
-    //             //     if(statemanager.statemanager.statemanager.state>0){
-    //             //         GrabObject();
-    //             //     }
-    //             // break;
-    //             // case "fox" :
-    //             // if(statemanager.statemanager.statemanager.state>1){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "wolf" :
-    //             // if(statemanager.statemanager.statemanager.state>2){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "bear" :
-    //             // if(statemanager.statemanager.statemanager.state>3){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // if(statemanager.statemanager.statemanager.state>4){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //             // case "human" :
-    //             // if(statemanager.statemanager.statemanager.state>5){
-    //             //     GrabObject();
-    //             // }
-    //             // break;
-    //     //    }
-    //
-    //
-    //         }
-    //     }
-    // }
+
 }

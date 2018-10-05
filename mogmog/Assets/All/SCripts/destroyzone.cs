@@ -11,7 +11,7 @@ public class destroyzone : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
+Debug.Log("point：" + statemanager.point);
 	}
 //プレイヤーが逃した動物を消すためのスクリプト
 	void OnTriggerEnter (Collider col) {
@@ -23,7 +23,7 @@ public class destroyzone : MonoBehaviour {
 			case "bear" :
 			case "human" :
 
-		 	Debug.Log("destroy");
+		 	//Debug.Log(col.gameObject.tag);
 		 	col.gameObject.SendMessage("damage");
 			 break;
 		}
