@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - grab
+  - ME
+  - Body
+  - bear
+  - hare
+  - wolf
+  - fox
+  - food
+  - human
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - debug
   - 
   - 
   - 

@@ -20,11 +20,13 @@ public static int SceneFlag = 0;
 
 	// Use this for initialization
 	void Start () {
-SceneFlag = 0;
+		SceneFlag = 0;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
+		// point ++;
 
 		Debug.Log(state);
 if(point<5){

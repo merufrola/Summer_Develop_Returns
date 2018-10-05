@@ -49,7 +49,9 @@ public GameObject usagi;
 
 //センサに食べ物が当たった時の処理
 Debug.Log(col.gameObject.tag);
+
 switch(col.gameObject.tag){
+
 case "hare":
 
 	if(statemanager.haregrab == true ){
@@ -57,6 +59,7 @@ case "hare":
 			    statemanager.point = statemanager.point + 5;
 				eatSound1.PlayOneShot(eatSound1.clip);
 				statemanager.haregrab = false;
+				ContollerGrabObject.objectName = null;
 break;
 			}
 
@@ -76,10 +79,12 @@ break;
 case "fox":
 
 if(statemanager.foxgrab == true){
+	Debug.Log("ok");
 			col.gameObject.SendMessage("damage");
 		statemanager.point = statemanager.point + 10;
 eatSound1.PlayOneShot(eatSound1.clip);
 statemanager.foxgrab = false;
+ContollerGrabObject.objectName = null;
 break;
 	}
 
@@ -101,6 +106,7 @@ if(statemanager.wolfgrab == true){
 		statemanager.point = statemanager.point + 20;
 eatSound1.PlayOneShot(eatSound1.clip);
 statemanager.wolfgrab = false;
+ContollerGrabObject.objectName = null;
 break;
 	}
 
@@ -123,6 +129,7 @@ if(statemanager.beargrab == true){
 		statemanager.point = statemanager.point + 700;
 		eatSound1.PlayOneShot(eatSound1.clip);
 		statemanager.beargrab = false;
+		ContollerGrabObject.objectName = null;
 		break;
 
 	}
@@ -144,6 +151,7 @@ if(statemanager.foodgrab == true){
 		statemanager.point = statemanager.point + 1;
 		eatSound1.PlayOneShot(eatSound1.clip);
 		statemanager.foodgrab = false;
+		ContollerGrabObject.objectName = null;
 		break;
 	}
 
@@ -160,7 +168,11 @@ break;
 
 
 	void Dead(){
+		int nowtop = PlayerPrefs.GetInt("HighScore",0);
 		Debug.Log("dead");
+		if(nowtop<statemanager.point){
+		PlayerPrefs.SetInt("HighScore", statemanager.point);
+}
 		SceneManager.LoadScene("FinishScene");
 
 	}

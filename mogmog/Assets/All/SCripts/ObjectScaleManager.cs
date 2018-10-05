@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ObjectScaleManager : MonoBehaviour {
 
-	public static int state;
-
 	[SerializeField] GameObject gameObject;
 
 	private AudioSource eatSound1;
@@ -25,7 +23,7 @@ public class ObjectScaleManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//statemanager.state = 5;
-		
+
 	}
 
 	// Update is called once per frame

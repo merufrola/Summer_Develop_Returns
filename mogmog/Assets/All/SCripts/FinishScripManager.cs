@@ -29,7 +29,7 @@ private AudioSource losesound;
 		}
 
 		text2.text = "point：" + statemanager.point;
-		//text3.text = "Pull trigger to Retry";
+		text3.text = "HighScore：" + PlayerPrefs.GetInt("HighScore", 0);
 
 	}
 

@@ -8,7 +8,7 @@ public class acornScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Invoke("damage",destroyTime);
 	}
 
 	// Update is called once per frame

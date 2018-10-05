@@ -10,11 +10,11 @@ int randGOAL;
 int flag = 0;
 Animator animator ;
 
-[SerializeField]
-public GameObject bear;
-
-[SerializeField]
-public GameObject fox;
+// [SerializeField]
+// public GameObject bear;
+//
+// [SerializeField]
+// public GameObject fox;
 
 	// Use this for initialization
 	void Start () {
