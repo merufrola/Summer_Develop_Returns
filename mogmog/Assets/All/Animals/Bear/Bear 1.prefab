@@ -826,26 +826,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  bear: {fileID: 0}
-  fox: {fileID: 0}
 --- !u!114 &114327022943938960
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913454683157044}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 575cbab40c63e9f4c8455ffe0707d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 0}
-  scaleFlag0: 0
-  scaleFlag1: 0
-  scaleFlag2: 0
-  scaleFlag3: 0
-  scaleFlag4: 0
-  scaleFlag5: 0
 --- !u!137 &137446999813627000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
