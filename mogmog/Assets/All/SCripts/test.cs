@@ -12,13 +12,13 @@ public Text Text;
 
 	// Update is called once per frame
 	void Update () {
-		// if(statemanager.foodgrab){
-		// 	this.Text.text = "1";
+		// if(ContollerGrabObject.GrabFlag == true){
+		// 	this.Text.text = "true";
 		// }
 		// else{
-		// 	this.Text.text = "0";
+		// 	this.Text.text = "false";
 		// }
-		this.Text.text = ContollerGrabObject.objectName;
+	 this.Text.text = ContollerGrabObject.testName;
 	}
 
 }

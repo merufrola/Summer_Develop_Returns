@@ -21,6 +21,9 @@ Animator animator ;
 // InvokeRepeating("rand",5f,5f);
 //フードセンサの位置を取得(プレイヤーめがけて動かない場合は必要ない)
 target = GameObject.Find("foodsencer").transform;
+
+
+
 //animator = GetComponent<Animator>;
 	}
 
@@ -33,6 +36,15 @@ target = GameObject.Find("foodsencer").transform;
 // 		transform.position += transform.forward*0.05f;
 // 	}
 // 	else if(flag == 1){
+
+
+// if(flag == 0){
+// target = GameObject.Find("foodsencer").transform;
+// transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target.position-transform.position),1f);
+// flag = 1;
+// }
+
+
 
 //反転してしまう動物たちのためのスクリプト
 if(statemanager.Timeflag == 0){
@@ -53,18 +65,18 @@ if(statemanager.Timeflag == 0){
 
 
 //プレイヤーとの位置を測るためのスクリプト(プレイヤーに向かってこない場合は必要ない)
-Ray ray = new Ray(transform.position, transform.forward);
-RaycastHit hit;
-if(Physics.Raycast(ray, out hit, 10.0f)){
-	if(hit.collider.tag == "ME"){
-
-	float dis = hit.distance;
-		if(dis<15){
-			flag = 1;
-		}
-}
-
-}
+// Ray ray = new Ray(transform.position, transform.forward);
+// RaycastHit hit;
+// if(Physics.Raycast(ray, out hit, 10.0f)){
+// 	if(hit.collider.tag == "ME"){
+//
+// 	float dis = hit.distance;
+// 		if(dis<15){
+// 			flag = 1;
+// 		}
+// }
+//
+// }
 
 
 
@@ -76,6 +88,9 @@ if(Physics.Raycast(ray, out hit, 10.0f)){
 	}
 void damage(){
 	ContollerGrabObject.GrabFlag = false;
+	Destroy(this.gameObject);
+}
+void DestroyDamage(){
 	Destroy(this.gameObject);
 }
 

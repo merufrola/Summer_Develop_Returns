@@ -28,7 +28,7 @@ public static int SceneFlag = 0;
 	void Update () {
 		// point ++;
 
-		Debug.Log(state);
+		//Debug.Log(state);
 if(point<5){
 	//どんぐり
 	state = 0;
@@ -67,7 +67,12 @@ else if(point>= 775){
 
 	}
 	void finish(){
+		int nowtop = PlayerPrefs.GetInt("HighScore",0);
 		Debug.Log("finish");
+		if(nowtop<statemanager.point){
+		PlayerPrefs.SetInt("HighScore", statemanager.point);
+}
 		SceneManager.LoadScene("FinishScene");
+
 }
 }
