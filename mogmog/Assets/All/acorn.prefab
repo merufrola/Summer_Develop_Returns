@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef180a95f4214c4991c84b700ed0051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyTime: 15
+  destroyTime: 10
 --- !u!114 &114475729359891426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,13 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575cbab40c63e9f4c8455ffe0707d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 1212009715751818}
-  scaleFlag0: 0
-  scaleFlag1: 0
-  scaleFlag2: 0
-  scaleFlag3: 0
-  scaleFlag4: 0
-  scaleFlag5: 0
 --- !u!135 &135394208768312242
 SphereCollider:
   m_ObjectHideFlags: 1
